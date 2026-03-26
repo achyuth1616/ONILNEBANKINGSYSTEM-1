@@ -7,6 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 
 /**
  * Created by IntelliJ IDEA.
@@ -19,6 +20,7 @@ import jakarta.persistence.ManyToOne;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
+@Table(name = "recipient")
 public class Recipient {
 
     @Id

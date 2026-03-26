@@ -5,11 +5,14 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "activity_log")
 public class ActivityLog {
 
     @Id
@@ -17,14 +20,16 @@ public class ActivityLog {
     private Long id;
 
     @ManyToOne
+    @JoinColumn(name = "user_user_id")
     private User user;
 
-    @Column(nullable = false)
+    @Column(name = "activity_type", nullable = false)
     private String activityType;
 
     @Column(length = 500)
     private String description;
 
+    @Column(name = "ip_address")
     private String ipAddress;
 
     @Column(nullable = false)

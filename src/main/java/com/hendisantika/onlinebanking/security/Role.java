@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -20,6 +21,7 @@ import java.util.Set;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
+@Table(name = "role")
 public class Role {
 
     @Id

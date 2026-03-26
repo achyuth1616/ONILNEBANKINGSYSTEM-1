@@ -23,11 +23,12 @@ import java.util.Set;
  * To change this template use File | Settings | File Templates.
  */
 @Entity
+@Table(name = "user")
 public class User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "userId", nullable = false, updatable = false)
+    @Column(name = "user_id", nullable = false, updatable = false)
     private Long userId;
     private String username;
     private String password;
